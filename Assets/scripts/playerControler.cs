@@ -22,6 +22,7 @@ public class playerControler : MonoBehaviour
         {
             transform.Translate(2, 0, 0);
         }  
+        
 
         Vector3 posicionActual = transform.position;
         posicionActual.x = Mathf.Clamp(posicionActual.x, -2f, 2f);
