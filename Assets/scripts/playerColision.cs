@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cajaColision : MonoBehaviour
+public class playerColision : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,16 +13,14 @@ public class cajaColision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-
     void OnCollisionEnter(Collision col)
     {
         if(col.gameObject.CompareTag("caja"))
         {
-            col.gameObject.GetComponent<cajaMovement>().acelerationOfCaja();
-            col.gameObject.GetComponent<cajaSpawn>().LocateBoxAtRandomPosition();
+            Destroy(gameObject);
+            col.gameObject.GetComponent<timer>().StopTimer();
         }
     }
-    
 }

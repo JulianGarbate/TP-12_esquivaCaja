@@ -28,12 +28,27 @@ public class playerControler : MonoBehaviour
         posicionActual.x = Mathf.Clamp(posicionActual.x, -2f, 2f);
         transform.position = posicionActual;
     }
+    
+    public TimerController temporizador; 
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.CompareTag("caja"))
+        if (col.gameObject.CompareTag("caja"))
         {
+            // Verificamos si asignaste el timer en el Inspector
+            if (temporizador != null)
+            {
+                temporizador.StopTimer(); // Frena el timer
+            }
+            else
+            {
+                Debug.LogError("¡Te olvidaste de arrastrar el Timer al script del Jugador!");
+            }
+
+            // Destruimos el jugador al final
             Destroy(gameObject);
         }
     }
+}
+    
 }

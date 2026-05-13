@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 779721771}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: caja
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,6 +321,8 @@ GameObject:
   - component: {fileID: 1256881398}
   - component: {fileID: 1256881397}
   - component: {fileID: 1256881401}
+  - component: {fileID: 1256881402}
+  - component: {fileID: 1256881403}
   m_Layer: 0
   m_Name: helice
   m_TagString: Untagged
@@ -358,7 +360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6a01662ee485a464ab196c42ddd9299a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -413,6 +415,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+--- !u!54 &1256881402
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256881396}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 110
+  m_CollisionDetection: 0
+--- !u!114 &1256881403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256881396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11be6a45a35f67d4ca79a03f29e7dc91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1510219476
 GameObject:
   m_ObjectHideFlags: 0
