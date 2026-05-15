@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class playerControler : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,6 @@ public class playerControler : MonoBehaviour
         {
             transform.Translate(2, 0, 0);
         }  
-        
 
         Vector3 posicionActual = transform.position;
         posicionActual.x = Mathf.Clamp(posicionActual.x, -2f, 2f);
@@ -35,20 +33,16 @@ public class playerControler : MonoBehaviour
     {
         if (col.gameObject.CompareTag("caja"))
         {
-            // Verificamos si asignaste el timer en el Inspector
             if (temporizador != null)
             {
-                temporizador.StopTimer(); // Frena el timer
+                temporizador.StopTimer();
             }
             else
             {
                 Debug.LogError("¡Te olvidaste de arrastrar el Timer al script del Jugador!");
             }
 
-            // Destruimos el jugador al final
             Destroy(gameObject);
         }
     }
-}
-    
 }

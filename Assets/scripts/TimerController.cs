@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 
-public class timer : MonoBehaviour
+public class TimerController : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     private float timeElapsed;
@@ -13,6 +13,9 @@ public class timer : MonoBehaviour
         {
             timeElapsed += Time.deltaTime;
             timerText.text = timeElapsed.ToString("F2");
+        }
+        else{
+            timerText.text = "Game over";
         }
     }
 

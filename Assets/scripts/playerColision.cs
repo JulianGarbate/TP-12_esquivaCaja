@@ -17,10 +17,9 @@ public class playerColision : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.CompareTag("caja"))
-        {
+        
             Destroy(gameObject);
-            col.gameObject.GetComponent<timer>().StopTimer();
-        }
+            col.gameObject.GetComponent<TimerController>().StopTimer();
+        
     }
 }
